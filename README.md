@@ -2,7 +2,7 @@
 
 This is a book record management API Backend for the management of book records.
 
-# Routed and Endpoints
+# Routes and Endpoints
 
 ## /users
 POST: Create a new user
