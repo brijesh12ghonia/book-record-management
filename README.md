@@ -24,12 +24,12 @@ GET: Get a user subscription details ✅
 3. Fine (If any)
 
 ## /books
-GET: Get all books ✅
-POST: Add a new book ✅
+GET: Get all books ✅<br>
+POST: Add a new book ✅<br>
 
 ## /books/{id}
-GET: Get a book by ID ✅
-POST: update a book by ID ✅
+GET: Get a book by ID ✅<br>
+POST: update a book by ID ✅<br>
 
 ## /books/issued
 GET: Get all books issued ✅
