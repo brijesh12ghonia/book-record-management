@@ -61,4 +61,61 @@ router.get('/issued/books', (req, res) => {
     })
 });
 
+//Add a new book
+router.post('/', (req, res) => {
+    const { data } = req.body;
+
+    if (!data) {
+        return res.status(400).json({
+            success: false,
+            message: "No data provided"
+        });
+    }
+
+    const book = books.find((each) => each.id === data.id);
+
+    if (book) {
+        return res.status(404).json({
+            success: false,
+            message: "Book already exist with this ID"
+        });
+    }
+
+    const allBooks = [...books, data];
+
+    return res.status(201).json({
+        success: true,
+        data: allBooks
+    });
+});
+
+//Update a book details by ID
+router.put('/:id', (req, res) => {
+    const { id } = req.params;
+    const { data } = req.body;
+    const book = books.find((each) => each.id === id);
+
+    if (!book) {
+        return res.status(404).json({
+            success: false,
+            message: "Book Not Found"
+        });
+    }
+
+    const updatedBook = books.map((each) => {
+        if (each.id === id) {
+            return {
+                ...each,
+                ...data
+            };
+        }
+        return each;
+    });
+
+    return res.status(200).json({
+        success: true,
+        data: updatedBook
+    });
+});
+
 module.exports = router;
