@@ -18,24 +18,21 @@ PUT: Update a user by ID ✅<br>
 DELETE: Delete a user by ID (check if he/she still has an issued book or is there any fine to be paid) ✅<br>
 
 ## /users/subscription-details/{id}
-GET: Get a user subscription details
+GET: Get a user subscription details ✅
 1. Date of subscription
 2. Valid till
 3. Fine (If any)
 
 ## /books
 GET: Get all books ✅
-POST: Add a new book
+POST: Add a new book ✅
 
 ## /books/{id}
 GET: Get a book by ID ✅
-POST: update a book by ID
+POST: update a book by ID ✅
 
 ## /books/issued
-GET: Get all books issued
-
-## /books/issued/withFine
-GET: GET all books issued with fine
+GET: Get all books issued ✅
 
 # Subscription Types
 Basic (3 months)<br>
