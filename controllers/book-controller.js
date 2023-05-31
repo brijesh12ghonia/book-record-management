@@ -14,7 +14,7 @@ exports.getAllBooks = async (req, res) => {
         success: true,
         data: books
     });
-}
+};
 
 exports.getSingleBookById = async (req, res) => {
     const { id } = req.params
@@ -29,7 +29,7 @@ exports.getSingleBookById = async (req, res) => {
         success: true,
         data: book
     });
-}
+};
 
 exports.getAllIssuedBooks = async (req, res) => {
     const users = await userModel.find({
@@ -49,7 +49,7 @@ exports.getAllIssuedBooks = async (req, res) => {
         success: true,
         data: issuedBooks
     })
-}
+};
 
 exports.addNewBook = async (req, res) => {
     const { data } = req.body;
@@ -69,7 +69,7 @@ exports.addNewBook = async (req, res) => {
         success: true,
         data: allBooks
     });
-}
+};
 
 exports.updateBookById = async (req, res) => {
     const { id } = req.params;
@@ -85,4 +85,4 @@ exports.updateBookById = async (req, res) => {
         success: true,
         data: updatedBook
     });
-}
+};
